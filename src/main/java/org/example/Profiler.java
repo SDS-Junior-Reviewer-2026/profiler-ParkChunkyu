@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Profiler {
     // TODO : Profiler 구현
     private ArrayList<Integer> _data;
-    private String _sortType = "bubbleSort";
+    private SortType _sortType = SortType.BUBBLE_SORT;
     private SortServiceLib _sortLib = new BubbleSort();
     private Integer _swap_count = 0;
 
@@ -13,13 +13,16 @@ public class Profiler {
         this._data = data;
     }
 
-    public void setLib(String type) {
+    public void setLib(SortType type) {
         this._sortType = type;
         switch (type) {
-            case "bubbleSort":
+            case BUBBLE_SORT:
                 this._sortLib = new BubbleSort();
                 break;
-            case "selectionSort":
+            case INSERTION_SORT:
+                this._sortLib = new InsertionSort();
+                break;
+            case SELECTION_SORT:
                 this._sortLib = new SelectionSort();
                 break;
             default:

@@ -8,14 +8,21 @@ public class Main {
 
         Profiler profiler = new Profiler();
         profiler.setData(new ArrayList<>(Arrays.asList(5,2,1,1,7,3,1,4,2,8,6,9,1)));
-        profiler.setLib("bubbleSort");
+        profiler.setLib(SortType.BUBBLE_SORT);
         profiler.runLib();
         profiler.showResult();
 
-        System.out.println("--------------------");
+        System.out.println("--------------------------------------------------");
 
         profiler.setData(new ArrayList<>(Arrays.asList(5,2,1,1,7,3,1,4,2,8,6,9,1)));
-        profiler.setLib("selectionSort");
+        profiler.setLib(SortType.INSERTION_SORT);
+        profiler.runLib();
+        profiler.showResult();
+
+        System.out.println("--------------------------------------------------");
+
+        profiler.setData(new ArrayList<>(Arrays.asList(5,2,1,1,7,3,1,4,2,8,6,9,1)));
+        profiler.setLib(SortType.SELECTION_SORT);
         profiler.runLib();
         profiler.showResult();
     }

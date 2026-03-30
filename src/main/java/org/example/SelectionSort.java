@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class SelectionSort implements SortServiceLib {
 
+    @Override
     public Integer sort(ArrayList<Integer> arr) {
         int swap_count = 0;
         for (int i = 0; i < arr.size(); i++) {
